@@ -8,40 +8,38 @@ namespace PracticaCalificada1.Models
     public class Formulario
     {
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-
         [Required(ErrorMessage = "Por favor ingrese su DNI")]
-        [Display(Name="dni")]
+        [Display(Name="DNI")]
          [Column("dni")]
-        public String dni { get; set; }
+        public int dni { get; set; }
 
         [Required(ErrorMessage = "Por favor ingrese su nombre")]
-        [Display(Name="nombre")]
+        [Display(Name="Nombre")]
          [Column("nombre")]
         public String nombre { get; set; }
 
         [Required(ErrorMessage = "Por favor ingrese su apellido")]
-        [Display(Name="apellido")]
+        [Display(Name="Apellido")]
         [Column("apellido")]
         public String apellido { get; set; }
 
         [Required(ErrorMessage = "Por favor seleccione su distrito")]
-        [Display(Name="distrito")]
+        [Display(Name="Distrito")]
         [Column("distrito")]
         public String distrito { get; set; }
 
         [Required(ErrorMessage = "Por favor seleccione su banco")]
-        [Display(Name="banco")]
+        [Display(Name="Banco")]
         [Column("banco")]
         public String banco { get; set; }
 
         [Required(ErrorMessage = "Por favor ingrese su edad")]
-        [Display(Name="edad")]
+        [Display(Name="Edad")]
         [Column("edad")]
-        public String edad { get; set; }
+        public int edad { get; set; }
 
         [Required(ErrorMessage = "Por favor seleccione su genero")]
-        [Display(Name="genero")]
+        [Display(Name="Genero")]
         [Column("genero")]
         public String genero { get; set; }
         
