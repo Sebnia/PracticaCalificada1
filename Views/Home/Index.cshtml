@@ -1,8 +1,68 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model PracticaCalificada1.Models.Formulario
+
+@{
+    ViewData["Title"] = "Hecho por Sebastián Pino";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Registro de Datos</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-4">  
+        <h1 class="display-4">Consulta</h1>
+        <form asp-controller="Consulta" asp-action="Registrar">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="dni" class="control-label"></label>
+                <input asp-for="dni" class="form-control" />
+                <span asp-validation-for="dni" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nombre" class="control-label"></label>
+                <input asp-for="nombre" class="form-control" />
+                <span asp-validation-for="nombre" class="text-danger"></span>
+            </div>    
+
+            <div class="form-group">
+                <label asp-for="apellido" class="control-label"></label>
+                <input asp-for="apellido" class="form-control" />
+                <span asp-validation-for="apellido" class="text-danger"></span>
+            </div>               
+                   
+            <div class="form-group">
+                <label asp-for="distrito" class="control-label"></label>
+                <input asp-for="distrito" class="form-control" />
+                <span asp-validation-for="distrito" class="text-danger"></span>
+            </div> 
+
+            <div class="form-group">
+                <label asp-for="banco" class="control-label"></label>
+                <input asp-for="banco" class="form-control" />
+                <span asp-validation-for="banco" class="text-danger"></span>
+            </div>      
+
+            <div class="form-group">
+                <label asp-for="edad" class="control-label"></label>
+                <input asp-for="edad" class="form-control" />
+                <span asp-validation-for="edad" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="genero" class="control-label"></label>
+                <input asp-for="genero" class="form-control" />
+                <span asp-validation-for="genero" class="text-danger"></span>
+            </div>    
+               
+
+            <div class="form-group">
+                 <button type="submit" class="btn btn-default">Registrar</button> 
+            </div>                
+
+        </form>
+
+        
+    </div>
+
 </div>
